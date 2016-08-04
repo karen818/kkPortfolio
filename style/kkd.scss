@@ -1,0 +1,119 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+$bodyFont: 'Raleway', sans-serif;
+$headerFont: 'Poiret One', cursive;
+
+$orangeSoda: rgba(245, 93, 62, 1);
+$medGrey: rgba(93, 115, 126, 1);
+$kiwi: rgba(143, 234, 98, 1);
+$darkGrey: rgba(58, 64, 90, 1);
+$dimGrey: rgba(102, 107, 106, 1);
+$clouds: #ecf0f1;
+
+
+body {
+  background-color: $darkGrey;
+  color: $clouds;
+  font: 100% $bodyFont;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $kiwi;
+  font-family: $headerFont;
+  font-weight: bold;
+}
+
+p {
+  font-size: 150%;
+}
+
+.navbar-inverse {
+  background-color: $darkGrey;
+}
+
+.navbar-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    font-weight: bold;
+   }
+
+   li:hover {
+     background-color: $kiwi;
+     color: $darkGrey;
+   }
+
+  a {
+    font-size: 150%;
+  }
+  a:hover,
+  a:active {
+    color: $darkGrey !important;
+  }
+
+}
+
+.button {
+  font-family: $headerFont;
+  font-weight: bold;
+}
+
+.coloredBG {
+  background-color: $dimGrey;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.transparent {
+  margin: 30px;
+  background-color: #000;
+  border: 1px solid #3a3a3a;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  /* For IE8 and earlier */
+  border-radius: 5px;
+}
+
+//PARALLAX//
+#intro {
+  background: url(img/1.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+}
+#work {
+  background: url(img/2.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 200px 0;
+}
+#about {
+  background: url(img/3.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #fff;
+}

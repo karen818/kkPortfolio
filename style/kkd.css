@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+body {
+  background-color: #3a405a;
+  color: #ecf0f1;
+  font: 100% "Raleway", sans-serif;
+  font-weight: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #8fea62;
+  font-family: "Poiret One", cursive;
+  font-weight: bold; }
+
+p {
+  font-size: 150%; }
+
+.navbar-inverse {
+  background-color: #3a405a; }
+
+.navbar-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.navbar-nav li {
+  display: inline-block;
+  font-weight: bold; }
+.navbar-nav li:hover {
+  background-color: #8fea62;
+  color: #3a405a; }
+.navbar-nav a {
+  font-size: 150%; }
+.navbar-nav a:hover,
+.navbar-nav a:active {
+  color: #3a405a !important; }
+
+.button {
+  font-family: "Poiret One", cursive;
+  font-weight: bold; }
+
+.coloredBG {
+  background-color: #666b6a;
+  border-radius: 100px;
+  text-align: center; }
+
+.transparent {
+  margin: 30px;
+  background-color: #000;
+  border: 1px solid #3a3a3a;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  /* For IE8 and earlier */
+  border-radius: 5px; }
+
+#intro {
+  background: url(img/1.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  padding: 100px 0; }
+
+#work {
+  background: url(img/2.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  padding: 200px 0; }
+
+#about {
+  background: url(img/3.jpg) 50% 0 fixed;
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  padding: 100px 0;
+  color: #fff; }
+
+/*# sourceMappingURL=kkd.css.map */
