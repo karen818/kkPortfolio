@@ -3,13 +3,14 @@
 body {
   background-color: #3a405a;
   color: #ecf0f1;
-  font: 100% "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #8fea62;
+  color: #f55d3e;
   font-family: "Poiret One", cursive;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0; }
 
 p {
   font-size: 150%; }
@@ -28,7 +29,7 @@ p {
   font-weight: bold; }
 .navbar-nav li:hover,
 .navbar-right li:hover {
-  background-color: #8fea62;
+  background-color: #f55d3e;
   color: #3a405a; }
 .navbar-nav a,
 .navbar-right a {
@@ -62,36 +63,33 @@ p {
   border-radius: 5px; }
 
 #intro {
-  background: url(img/1.jpg) 50% 0 fixed;
+  background: url(img/4.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   padding: 100px 0; }
 
 #work {
-  background: url(img/2.jpg) 50% 0 fixed;
+  background: url(img/5.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   padding: 200px 0; }
 
 #about {
-  background: url(img/3.jpg) 50% 0 fixed;
+  background: url(img/7.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   padding: 100px 0;
   color: #fff; }
 
@@ -128,9 +126,9 @@ p {
   pointer-events: auto;
   position: relative;
   z-index: 3;
-  background: url(img/1.jpg) 50% 0 fixed;
-  background-repeat: repeat;
-  background-size: contain;
+  background: url(img/4.jpg) 50% 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   transform-origin: center 70%;
   transition: all 0.3s ease; }
@@ -144,7 +142,7 @@ p {
       #container section:first-of-type {
         padding-top: 15vh; } }
   #container section:nth-of-type(2n) {
-    background-color: white; }
+    background-color: #3a405a; }
 
 .hamburger {
   position: fixed;
@@ -161,7 +159,7 @@ p {
       display: block;
       width: 45px;
       height: 6px;
-      background-color: #3a405a;
+      background-color: #f55d3e;
       border-radius: 2px; }
     .hamburger span:before, .hamburger span:after {
       content: '';

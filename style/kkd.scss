@@ -16,14 +16,15 @@ $clouds: #ecf0f1;
 body {
   background-color: $darkGrey;
   color: $clouds;
-  font: 100% $bodyFont;
+  font-family: $bodyFont;
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $kiwi;
+  color: $orangeSoda;
   font-family: $headerFont;
   font-weight: bold;
+  margin: 0;
 }
 
 p {
@@ -48,7 +49,7 @@ p {
    }
 
    li:hover {
-     background-color: $kiwi;
+     background-color: $orangeSoda;
      color: $darkGrey;
    }
 
@@ -90,36 +91,36 @@ p {
 
 //PARALLAX//
 #intro {
-  background: url(img/1.jpg) 50% 0 fixed;
+  background: url(img/4.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
     width: 100%;
     position: relative;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 100px 0;
 }
 #work {
-  background: url(img/2.jpg) 50% 0 fixed;
+  background: url(img/5.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
     width: 100%;
     position: relative;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 200px 0;
 }
 #about {
-  background: url(img/3.jpg) 50% 0 fixed;
+  background: url(img/7.jpg) 50% 0 fixed;
   background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   margin: 0 auto;
     width: 100%;
     position: relative;
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 100px 0;
     color: #fff;
 }
@@ -168,9 +169,9 @@ p {
 	pointer-events: auto;
 	position: relative;
 	z-index: 3;
-  background: url(img/1.jpg) 50% 0 fixed;
-  background-repeat: repeat;
-  background-size: contain;
+  background: url(img/4.jpg) 50% 0 fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 	box-shadow: 0 0 20px rgba(black, 0.7);
 	transform-origin: center 70%;
 	transition: all 0.3s ease;
@@ -188,7 +189,7 @@ p {
 			}
 		}
 		&:nth-of-type(2n) {
-			background-color: lighten($darkGrey, 75%);
+			background-color: $darkGrey;
 		}
 	}
 }
@@ -209,7 +210,7 @@ p {
 			display: block;
 			width: 45px;
 			height: 6px;
-			background-color: $darkGrey;
+			background-color: $orangeSoda;
 			border-radius: 2px;
 		}
 
