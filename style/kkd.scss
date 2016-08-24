@@ -1,71 +1,55 @@
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+$dkBlue: rgba(11, 57, 84, 1);
+$medBlue: #1D4C82;
+$fuschia: rgba(160, 48, 149, 1);
+$ltBlue: rgba(197, 232, 221, 1);
+$grey: rgba(126, 162, 170, 1);
 
-$bodyFont: 'Raleway', sans-serif;
-$headerFont: 'Poiret One', cursive;
+@import 'https://fonts.googleapis.com/css?family=Quicksand';
+@import 'https://fonts.googleapis.com/css?family=Crushed';
 
-$orangeSoda: rgba(245, 93, 62, 1);
-$medGrey: rgba(93, 115, 126, 1);
-$kiwi: rgba(143, 234, 98, 1);
-$darkGrey: rgba(58, 64, 90, 1);
-$dimGrey: rgba(102, 107, 106, 1);
-$clouds: #ecf0f1;
+@font-face {
+    font-family: "breathe";
+    src: url("fonts/Breathe-Regular.woff") format('woff');
+}
+
+$bodyFont: 'Quicksand', sans-serif;
+$headerFont: 'breathe', sans-serif;
 
 
 body {
-  background-color: $darkGrey;
-  color: $clouds;
+  background-color: $dkBlue;
+  color: white;
   font-family: $bodyFont;
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $orangeSoda;
+  color: $fuschia;
   font-family: $headerFont;
   font-weight: bold;
+  letter-spacing: 3px;
   margin: 0;
+}
+
+h2 {
+  color: white;
+  font-family: $bodyFont;
 }
 
 p {
   font-size: 150%;
 }
 
-.navbar-inverse {
-  background-color: $darkGrey;
-}
-
-.navbar-nav,
-.navbar-right {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    display: inline-block;
-    font-weight: bold;
-   }
-
-   li:hover {
-     background-color: $orangeSoda;
-     color: $darkGrey;
-   }
+.btn {
+  background-color: $fuschia;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
 
   a {
-    font-size: 150%;
-    }
-  a:hover,
-  a:active {
-    color: $darkGrey !important;
-    }
-
-  li.fa {
-    margin-top: 5px;
-    padding-right: 10px;
+    color: white;
   }
-
 }
 
 .button {
@@ -74,9 +58,30 @@ p {
 }
 
 .coloredBG {
-  background-color: $dimGrey;
+  background-color: $grey;
   border-radius: 100px;
   text-align: center;
+}
+
+.fa-github-square,
+.fa-twitter-square,
+.fa-linkedin-square {
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.fa-github-square:hover {
+	color: black;
+}
+.fa-twitter-square:hover {
+	color: #00aced;
+}
+.fa-linkedin-square:hover {
+	color: #0077b5;
+}
+
+.logo {
+  background-color: $dkBlue;
 }
 
 .transparent {
@@ -89,12 +94,13 @@ p {
   border-radius: 5px;
 }
 
-//PARALLAX//
+
 #intro {
-  background: url(img/4.jpg) 50% 0 fixed;
-  background-repeat: repeat;
+  background-image: url('img/bg.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
+  background-attachment: fixed;
+  height: 100vh;
   margin: 0 auto;
     width: 100%;
     position: relative;
@@ -102,27 +108,29 @@ p {
     padding: 100px 0;
 }
 #work {
-  background: url(img/5.jpg) 50% 0 fixed;
-  background-repeat: repeat;
-  background-size: cover;
+  background-color: $medBlue;
   height: auto;
   margin: 0 auto;
     width: 100%;
     position: relative;
-    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    padding: 200px 0;
+    padding: 20px 0;
+}
+#contact {
+  background-color: $medBlue;
+  height: auto;
+  margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
 }
 #about {
-  background: url(img/7.jpg) 50% 0 fixed;
-  background-repeat: repeat;
-  background-size: cover;
+  background-color: $dkBlue;
   height: auto;
   margin: 0 auto;
     width: 100%;
     position: relative;
-    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    padding: 100px 0;
-    color: #fff;
+    padding: 20px 0;
+    color: $ltBlue;
 }
 
 
@@ -132,7 +140,7 @@ p {
 #paper-back {
 	width: 100%;
 	height: 100vh;
-	background-color: $darkGrey;
+	background-color: $dkBlue;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -141,10 +149,13 @@ p {
 		padding: 120px 34px;
 		a {
 			display: block;
-			margin-bottom: 25px;
+			margin-bottom: 5px;
 			text-decoration: none;
-			color: rgba($clouds, 0.7);
+			color: rgba($ltBlue, 0.7);
 		}
+    a.navLink:hover {
+      color: $fuschia;
+    }
 	}
 }
 
@@ -169,9 +180,6 @@ p {
 	pointer-events: auto;
 	position: relative;
 	z-index: 3;
-  background: url(img/4.jpg) 50% 0 fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
 	box-shadow: 0 0 20px rgba(black, 0.7);
 	transform-origin: center 70%;
 	transition: all 0.3s ease;
@@ -180,16 +188,16 @@ p {
 //actual content
 #container {
 	section {
-		height: 600px;
+		// height: 600px;
 		text-align: center;
 		&:first-of-type {
-			padding-top: 10vh;
+			padding-top: 5vh;
 			@media (max-width: 600px) {
-				padding-top: 15vh;
+				padding-top: 5vh;
 			}
 		}
 		&:nth-of-type(2n) {
-			background-color: $darkGrey;
+			background-color: $dkBlue;
 		}
 	}
 }
@@ -210,7 +218,7 @@ p {
 			display: block;
 			width: 45px;
 			height: 6px;
-			background-color: $orangeSoda;
+			background-color: $fuschia;
 			border-radius: 2px;
 		}
 
@@ -239,9 +247,162 @@ p {
 			width: 45px;
 			height: 6px;
 			top: 50%;
-			background-color: white;
+			background-color: $ltBlue;
 			border-radius: 2px;
 		}
 		&:before { transform: translateY(-50%) rotate(45deg); }
 		&:after {	transform: translateY(-50%) rotate(-45deg); }
+}
+
+
+//HOVER EFFECT//
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: $medBlue;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+  background-color: $dkBlue;
+  opacity: 0.75;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Duke *****/
+/*---------------*/
+
+figure.effect-duke img,
+figure.effect-duke p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-duke:hover img {
+	opacity: 0.1;
+	-webkit-transform: scale3d(2,2,1);
+	transform: scale3d(2,2,1);
+}
+
+figure.effect-duke h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+figure.effect-duke p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+	padding: 30px;
+	border: 2px solid #fff;
+	text-transform: none;
+	font-size: 90%;
+	opacity: 0;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% -100%;
+	transform-origin: 50% -100%;
+}
+
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
 }

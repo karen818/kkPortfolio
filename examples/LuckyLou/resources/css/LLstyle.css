@@ -1,0 +1,580 @@
+/* -----------Colors------------ */
+
+/* pink: #f7d3e5 */
+/* darker pink: #d5297f */
+/* dark grey #2f2f2f */
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #000;
+	color: #f7d3e5;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	text-rendering: optimizeLegibility;
+}
+
+.clearfix { zoom: 1; }
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+.row {
+	max-width: 1850px;
+/*	margin: 0 10px 0 20px; */
+}
+
+.bracelets-row {
+	max-width: 1850px;
+	margin-left: 2.5%;
+}
+
+section {
+	padding: 20px 20px 20px 20px;
+}
+
+.box {
+	padding: 1%;
+}
+
+.long-copy {
+	margin: 1% 20%;
+	text-align: center;
+	font-size: 120%
+}
+
+/* ----- HEADINGS ----- */
+
+h1,
+h2,
+h3 {
+	color: #f7d3e5;
+	font-family: 'Special Elite', cursive;
+	margin: 0;
+	font-weight: 400;
+	text-align: center;
+}
+
+h1 {
+	font-size: 220%;
+	text-align: center;
+}
+
+h2 {
+	font-size: 200%;
+	padding: 20px;
+}
+
+h1:after {
+	display: block;
+	height: 5px;
+	background-color: #d5297f;
+	content: " ";
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+h3 {
+	color: #f7d3e5;
+	font-size: 150%;
+	text-align: center;
+}
+
+h3:after {
+	display: block;
+	height: 4px;
+	background-color: #d5297f;
+	content: " ";
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+
+/* ----- PARAGRAPHS ----- */
+
+p {
+	margin-top: 20px;
+	line-height: 150%;
+}
+
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+
+.header-img {
+	background-image: url(img/hero.jpg);
+	height: 100vh; 	/* 100% of viewport */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	z-index: 0;
+}
+
+.section-hero {
+	display: inline-block;
+}
+
+.logo {
+	height: auto;
+	width: auto;
+	float: left;
+	margin-top: 15%;
+	margin-left: 20%;
+	position: absolute;
+	z-index: 0;
+}
+
+
+/* ----------------------------------------------- */
+/* NAVIGATION */
+/* ----------------------------------------------- */
+
+/*--------- Main Nav ------*/
+
+nav {
+	width: 100%;
+}
+
+nav i {padding: 0 10px;}
+
+.main-nav {
+	list-style: none;
+/*	margin-top: 20px;*/
+	height: 40px;
+	position: relative;
+	z-index: 1;
+	width: 80%;
+}
+
+.cart-nav {
+	list-style: none;
+	float: right;
+	height: 40px;
+	position: relative;
+	z-index: 1;
+	width: 30%;
+}
+
+.main-nav li {
+	display: inline-block;
+	padding: 10px 10px;
+	font-size: 150%;
+	font-family: 'Special Elite', cursive;
+}
+
+.social-links-nav li {
+	margin-left: ;
+	list-style: none;
+	display: inline-block;
+	padding: 10px 1px;
+
+}
+
+.cart-nav li {
+	display: inline-block;
+	padding: 10px 0;
+	font-size: 150%;
+	font-family: 'Special Elite', cursive;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited,
+.cart-nav li a:link,
+.cart-nav li a:visited {
+	text-decoration: none;
+	color: #f7d3e5;
+	transition: color 0.10s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active,
+.cart-nav li a:hover,
+.cart-nav li a:active {
+	color: #d5297f;
+
+}
+
+
+/*_________ Sticky Nav --------*/
+
+.sticky .main-nav,
+.sticky .cart-nav {
+	position: fixed;
+	top: 0;
+	left: 0%;
+	z-index: 9999;
+	width: 100%;
+	font-size: 80%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sticky .social-links-nav {display: none;}
+
+.sticky .cart-nav {
+	margin-left: 85%;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+	color: #f7d3e5;
+	transition: color 0.10s;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+	color: #d5297f;
+}
+
+/* ----------------------------------------------- */
+/* SECTION-STYLES */
+/* SECTION-ACCESSORIES */
+/* ----------------------------------------------- */
+
+.section-styles h3:after {
+	display: none;
+}
+
+.section-styles {
+	background-image: url(img/grunge_texture_17_2.png);
+	background-size: cover;
+}
+
+.styles-showcase,
+.accessories-showcase,
+.bracelets-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.styles-showcase li,
+.accessories-showcase li,
+.bracelets-showcase li {
+	display: block;
+	float: left;
+}
+
+.bracelets-showcase li {
+	margin-left: .9%;
+}
+
+.styles-showcase figure,
+.accessories-showcase figure,
+.bracelets-showcase figure{
+	overflow: hidden;
+}
+
+.styles-showcase figure img,
+.accessories-showcase figure img,
+.bracelets-showcase figure img {
+	transition: transform 0.4s;
+}
+
+.styles-showcase figcaption,
+.accessories-showcase figcaption,
+.bracelets-showcase figcaption {
+	height: 100%;
+	width: 95%;
+	opacity: 0;
+	text-align: left;
+	line-height: 125%;
+	backface-visibility: hidden;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.styles-showcase figure:hover figcaption,
+.styles-showcase figure.cs-hover figcaption,
+.accessories-showcase figure:hover figcaption,
+.accessories-showcase figure.cs-hover figcaption,
+.bracelets-showcase figure:hover figcaption,
+.bracelets-showcase figure.cs-hover figcaption {
+	opacity: 0.85;
+	transform: translate(15px, 15px);
+}
+
+figure {
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+
+figure img {
+	max-width: 100%;
+	display: block;
+}
+
+figure a {
+	text-decoration: none;
+}
+
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	background: #2f2f2f;
+	color: #fff;
+}
+
+figcaption h5 {
+	font-size: 130%;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 10px 0;
+	color: #fff;
+	margin-top: 10px;
+}
+
+
+/* --------------------------------------- */
+/* FAQS */
+/* --------------------------------------- */
+
+.section-faqs {
+	background-image: url(img/luckyLouLogobg.png);
+	background-size: contain;
+	background-position: 50% 40%;
+	background-repeat: no-repeat;
+	background-color: #2f2f2f;
+}
+
+.section-faqs a:link,
+.section-faqs a:visited {
+	color: #f7d3e5;
+}
+
+.section-faqs a:hover,
+.section-faqs a:active {
+	color: #d5297f;
+	transition: 0.5s;
+}
+
+.section-faqs p {
+	margin: 0 8%;
+	font-size: 120%;
+}
+
+
+
+.section-faqs img {
+	margin: 0 25%;
+	width: 50%;
+
+
+}
+
+
+/* --------------------------------------- */
+/* CONTACT */
+/* --------------------------------------- */
+
+
+.section-contact h2:after {
+	display: block;
+	height: 2px;
+	background-color: #d5297f;
+	content: " ";
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.section-contact h2 {
+	color: #f7d3e5;
+	font-size: 180%;
+	text-align: center;
+}
+
+.section-contact p {
+	font-size: 150%;
+	text-align: center;
+}
+
+.section-contact a:link,
+.section-contact a:visited {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 300;
+	font-size: 150%;
+	color: #f7d3e5;
+
+}
+
+.section-contact a:hover,
+.section-contact a:active {
+	color: #d5297f;
+	transition: 0.5s;
+}
+
+.social-contact {
+	list-style: none;
+	float: left;
+	margin-left: 20%;
+}
+
+.social-contact li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.social-contact li a:link,
+.social-contact li a:visited {
+	text-decoration: none;
+	border: 0;
+	color: #f7d3e5;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.social-contact li a:link,
+.social-contact li a:visited {
+	font-size: 100%;
+}
+
+
+/* --------------------------------------- */
+/* STOCKISTS */
+/* --------------------------------------- */
+
+.section-stockists {
+	background-image: url(img/grunge_texture_17_2.png);
+	background-size: cover;
+}
+
+.section-stockists p {
+	margin: 0 8%;
+	font-size: 110%;
+	text-align: center;
+}
+
+.section-stockists span {
+	font-weight: 700;
+}
+.section-stockists a:link,
+.section-stockists a:visited {
+	color: #f7d3e5;
+}
+
+.section-stockists a:hover,
+.section-stockists a:active {
+	color: #d5297f;
+	transition: 0.5s;
+}
+
+.section-stockists h3 { color: #d5297f; }
+
+.section-stockists h3:after { display: none;}
+
+
+
+/* --------------------------------------- */
+/* FOOTER */
+/* --------------------------------------- */
+
+footer {
+	color: #f7d3e5;
+/*	background-image: url(img/04-blackpaper.png);*/
+	width: 100%;
+	padding: 10px 0;
+}
+
+footer p {
+	float: left;
+	font-size: 90%;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 38%;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+footer a:link,
+footer a:visited {
+	text-decoration: none;
+	color: #f7d3e5;
+}
+
+footer a:hover,
+footer a:active {
+	color: #d5297f;
+	transition: 0.5s;
+}
+
+.social-links {
+	list-style: none;
+	float: right;
+	margin-right: 50px;
+}
+
+.social-links li {
+	display: inline-block;
+	margin-right: 20px;
+
+}
+
+.social-links li:last-of-type {
+	margin-right: 100px;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+	text-decoration: none;
+	border: 0;
+	color: #f7d3e5;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+	font-size: 150%;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-pinterest{
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.fa-facebook:hover {
+	color: #3b5998;
+}
+.fa-twitter:hover {
+	color: #00aced;
+}
+.fa-instagram:hover {
+	color: #517fa4;
+}
+.fa-pinterest:hover {
+	color: #c8232c;
+}
