@@ -137,6 +137,12 @@ div.progress-bar {
   #about p {
     text-align: left;
     padding: 0 15px; }
+  #about li {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 150%; }
+  #about i {
+    color: #a03095; }
 
 #paper-back {
   width: 100%;

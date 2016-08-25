@@ -35,14 +35,12 @@ var paperMenu = {
 		this.$hamburger.off('click');
 		$('#container, .hamburger').on('click', this.close.bind(this));
 		this.hamburgerFix(true);
-		console.log('opening...');
 	},
 	close: function() {
 		this.$window.removeClass('tilt');
 		$('#container, .hamburger').off('click');
 		this.$hamburger.on('click', this.open.bind(this));
 		this.hamburgerFix(false);
-		console.log('closing...');
 	},
 	updateTransformOrigin: function() {
 		scrollTop = this.$window.scrollTop();
@@ -68,6 +66,7 @@ var paperMenu = {
 	bindEvents: function() {
 		this.$hamburger.on('click', this.open.bind(this));
 		$('.close').on('click', this.close.bind(this));
+		$('.navLink').on('click', this.close.bind(this));
 		this.$window.on('scroll', this.updateTransformOrigin.bind(this));
 	},
 	init: function() {
