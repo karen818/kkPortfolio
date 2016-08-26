@@ -1,12 +1,21 @@
+$mobile-screen: 690px;
+$tablet-screen: 995px;
+$desktop-screen: 1440px;
+
+$screen: "only screen";
+$mobile: "only screen and (max-width:#{$mobile-screen})";
+$tablet: "only screen and (min-width:#{$mobile-screen}) and (max-width: #{$tablet-screen})";
+$desktop: "only screen and (min-width:#{$tablet-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
 
 $dkBlue: rgba(11, 57, 84, 1);
 $medBlue: #1D4C82;
 $fuschia: rgba(160, 48, 149, 1);
-$ltBlue: rgba(197, 232, 221, 1);
-$grey: rgba(126, 162, 170, 1);
+
 
 @import 'https://fonts.googleapis.com/css?family=Quicksand';
-@import 'https://fonts.googleapis.com/css?family=Crushed';
 
 @font-face {
     font-family: "breathe";
@@ -82,12 +91,6 @@ div.progress-bar {
   font-weight: bold;
 }
 
-.coloredBG {
-  background-color: $grey;
-  border-radius: 100px;
-  text-align: center;
-}
-
 .fa-github-square,
 .fa-twitter-square,
 .fa-linkedin-square {
@@ -121,7 +124,8 @@ div.progress-bar {
 
 
 #intro {
-  background-image: url('img/bg.jpg');
+  background-image: url('img/bg.png');
+
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -129,8 +133,18 @@ div.progress-bar {
   margin: 0 auto;
     width: 100%;
     position: relative;
-    // box-shadow: 0 0 50px rgba(0,0,0,0.8);
     padding: 100px 0;
+}
+
+@media only screen
+  and (min-device-width: 300px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #intro {
+       background-image: url('img/bg.png');
+       background-size: contain;
+       height: 50vh;
+    }
 }
 #work {
   background-color: $medBlue;
@@ -140,26 +154,7 @@ div.progress-bar {
     position: relative;
     padding: 20px 0;
 }
-#contact {
-  background-color: $medBlue;
-  height: auto;
-  margin: 0 auto;
-    width: 100%;
-    position: relative;
-    padding: 20px 0;
-    a,
-    p {
-      font-size: 200%;
-      color: white;
-    }
-    a:hover,
-    a:visited,
-    a:active,
-    a:focus {
-      text-decoration: none;
-      font-weight: bold;
-    }
-}
+
 #about {
   background-color: $dkBlue;
   height: auto;
@@ -180,10 +175,27 @@ div.progress-bar {
       color: $fuschia;
     }
 }
-
-
-
-
+section#contact {
+  background-color: $medBlue;
+  height: auto;
+  margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    a,
+    p {
+      text-align: center;
+      font-size: 200%;
+      color: white;
+    }
+    a:hover,
+    a:visited,
+    a:active,
+    a:focus {
+      text-decoration: none;
+      font-weight: bold;
+    }
+}
 
 //TILT MENU//
 

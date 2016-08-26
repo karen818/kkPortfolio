@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css?family=Quicksand";
-@import "https://fonts.googleapis.com/css?family=Crushed";
 @font-face {
   font-family: "breathe";
   src: url("fonts/Breathe-Regular.woff") format("woff"); }
@@ -58,11 +57,6 @@ div.progress-bar {
   font-family: "breathe", sans-serif;
   font-weight: bold; }
 
-.coloredBG {
-  background-color: #7ea2aa;
-  border-radius: 100px;
-  text-align: center; }
-
 .fa-github-square,
 .fa-twitter-square,
 .fa-linkedin-square {
@@ -91,7 +85,7 @@ div.progress-bar {
   border-radius: 5px; }
 
 #intro {
-  background-image: url("img/bg.jpg");
+  background-image: url("img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -101,6 +95,11 @@ div.progress-bar {
   position: relative;
   padding: 100px 0; }
 
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #intro {
+    background-image: url("img/bg.png");
+    background-size: contain;
+    height: 50vh; } }
 #work {
   background-color: #1D4C82;
   height: auto;
@@ -108,24 +107,6 @@ div.progress-bar {
   width: 100%;
   position: relative;
   padding: 20px 0; }
-
-#contact {
-  background-color: #1D4C82;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  padding: 20px 0; }
-  #contact a,
-  #contact p {
-    font-size: 200%;
-    color: white; }
-  #contact a:hover,
-  #contact a:visited,
-  #contact a:active,
-  #contact a:focus {
-    text-decoration: none;
-    font-weight: bold; }
 
 #about {
   background-color: #0b3954;
@@ -143,6 +124,25 @@ div.progress-bar {
     font-size: 150%; }
   #about i {
     color: #a03095; }
+
+section#contact {
+  background-color: #1D4C82;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 20px 0; }
+  section#contact a,
+  section#contact p {
+    text-align: center;
+    font-size: 200%;
+    color: white; }
+  section#contact a:hover,
+  section#contact a:visited,
+  section#contact a:active,
+  section#contact a:focus {
+    text-decoration: none;
+    font-weight: bold; }
 
 #paper-back {
   width: 100%;
