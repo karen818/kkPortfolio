@@ -9,7 +9,7 @@ body {
   font-weight: normal; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #a03095;
+  color: white;
   font-family: "breathe", sans-serif;
   letter-spacing: 2px;
   margin: 0; }
@@ -24,7 +24,7 @@ h3 {
 h1:after {
   display: block;
   height: 2px;
-  background-color: white;
+  background-color: #a03095;
   content: " ";
   width: 200px;
   margin: 0 auto;
@@ -84,6 +84,10 @@ div.progress-bar {
   /* For IE8 and earlier */
   border-radius: 5px; }
 
+#vcard {
+  width: 70%;
+  height: auto; }
+
 #intro {
   background-image: url("img/bg.png");
   background-repeat: no-repeat;
@@ -95,11 +99,38 @@ div.progress-bar {
   position: relative;
   padding: 100px 0; }
 
-@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
   #intro {
-    background-image: url("img/bg.png");
+    background-size: cover;
+    height: 100vh; } }
+/* Landscape tablets and medium desktops */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #intro {
     background-size: contain;
-    height: 50vh; } }
+    height: 75vh; } }
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  .btn {
+    margin-top: 0%; }
+
+  #intro {
+    background-size: contain;
+    height: 50vh; }
+
+  p {
+    font-size: 180%; } }
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .btn {
+    margin-top: 50%; }
+
+  #intro {
+    background-size: contain;
+    height: 30vh; }
+
+  p {
+    font-size: 200%; } }
 #work {
   background-color: #1D4C82;
   height: auto;
@@ -186,10 +217,12 @@ section#contact {
 #container section {
   text-align: center; }
   #container section:first-of-type {
-    padding-top: 5vh; }
+    padding-top: 5vh;
+    padding-bottom: 0; }
     @media (max-width: 600px) {
       #container section:first-of-type {
-        padding-top: 5vh; } }
+        padding-top: 5vh;
+        padding-bottom: 0; } }
   #container section:nth-of-type(2n) {
     background-color: #0b3954; }
 
